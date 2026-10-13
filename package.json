@@ -1,0 +1,20 @@
+{
+  "name": "iansseijelly-slide-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev src/slides.md",
+    "build": "slidev build src/slides.md --out ../dist",
+    "export": "slidev export src/slides.md",
+    "export:latte": "slidev export src/slides.md --output exports/template-latte.pdf",
+    "export:mocha": "slidev export src/slides.md --dark --output exports/template-mocha.pdf"
+  },
+  "devDependencies": {
+    "@slidev/cli": "53.0.0",
+    "@slidev/theme-default": "0.25.0",
+    "playwright-chromium": "1.64.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

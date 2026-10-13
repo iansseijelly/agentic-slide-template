@@ -1,0 +1,131 @@
+@font-face { font-family: 'Inter'; src: url('/fonts/inter.ttf') format('truetype'); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Source Code Pro'; src: url('/fonts/source-code-pro.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Courier Prime'; src: url('/fonts/courier-prime.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+
+/* Appearance settings. Catppuccin: https://catppuccin.com/palette/ */
+:root {
+  --deck-bg: #eff1f5;
+  --deck-text: #4c4f69;
+  --deck-secondary: #5c5f77;
+  --deck-muted: #6c6f85;
+  --deck-surface: #e6e9ef;
+  --deck-border: #ccd0da;
+  --deck-accent: #1e66f5;
+  --deck-font: 'Inter', Arial, sans-serif;
+  --deck-heading-font: var(--deck-font);
+  --deck-display-font: 'Courier Prime', monospace;
+  --deck-mono: 'Source Code Pro', monospace;
+  --deck-title-size: 54px;
+  --deck-body-size: 25px;
+  --deck-cover-size: 80px;
+  --deck-gutter: 76px;
+  --deck-gap: 60px;
+  --slidev-theme-primary: var(--deck-accent);
+  --slidev-code-font-size: 20px;
+  --slidev-code-line-height: 1.6;
+}
+html.dark {
+  --deck-bg: #1e1e2e;
+  --deck-text: #cdd6f4;
+  --deck-secondary: #bac2de;
+  --deck-muted: #a6adc8;
+  --deck-surface: #181825;
+  --deck-border: #45475a;
+  --deck-accent: #89b4fa;
+}
+:root { --deck-accent-surface: color-mix(in srgb, var(--deck-accent) 16%, var(--deck-bg)); }
+html, body, #app, #slide-content { background: var(--deck-bg); }
+
+/* Shared slide frame and type scale. */
+.slidev-layout.deck { padding: 55px var(--deck-gutter) 76px; background: var(--deck-bg); color: var(--deck-text); font-family: var(--deck-font); font-size: var(--deck-body-size); line-height: 1.4; }
+.deck .deck-content { height: 100%; min-width: 0; }
+.deck h1 { font-family: var(--deck-heading-font); font-size: var(--deck-title-size); line-height: 1.12; font-weight: 700; letter-spacing: -.018em; margin: 0 0 24px; }
+.deck h2 { font-family: var(--deck-heading-font); font-size: 31px; line-height: 1.2; font-weight: 700; margin: 0 0 21px; }
+.deck h3 { font-family: var(--deck-heading-font); font-size: 25px; font-weight: 700; margin: 0 0 12px; }
+.deck p { margin: 0 0 18px; opacity: 1 !important; }
+.deck strong { font-weight: 700; }
+.deck a { color: var(--deck-accent); border: 0; }
+.deck .eyebrow { font-size: 16px; letter-spacing: .035em; color: var(--deck-muted); margin-bottom: 24px; }
+.deck .lead { font-size: 25px; line-height: 1.45; color: var(--deck-secondary); margin-bottom: 36px; }
+.deck .muted { color: var(--deck-secondary); }
+.deck .accent { color: var(--deck-accent); }
+.deck .small-label { font-size: 17px; color: var(--deck-muted); margin-bottom: 18px; }
+.deck .caption, .deck figcaption { font-size: 16px; color: var(--deck-muted); line-height: 1.4; margin-top: 16px; }
+.deck .caption p, .deck figcaption p { margin: 0; }
+.deck .slide-footer { position: absolute; bottom: 25px; left: var(--deck-gutter); right: var(--deck-gutter); display: flex; justify-content: space-between; font-size: 13px; letter-spacing: .025em; color: var(--deck-muted); }
+.deck ul, .deck ol { margin: 0; padding-left: 1.15em; }
+.deck li { margin: 0 0 18px; padding-left: .2em; line-height: 1.5; }
+.deck li::marker { color: var(--deck-accent); }
+.deck .body-copy { max-width: 920px; }
+.deck .body-copy li { margin-bottom: 24px; }
+.deck .bottom-note { margin-top: 28px; font-size: 23px; color: var(--deck-secondary); }
+.deck .bottom-note p { margin: 0; }
+
+/* Layouts: cover, section, split, figure, quote. */
+.deck.cover .eyebrow { margin-top: 22px; margin-bottom: 60px; }
+.deck.cover h1 { font-size: var(--deck-cover-size); line-height: 1.06; margin-bottom: 35px; }
+.deck.cover .lead { font-size: 28px; line-height: 1.5; }
+.deck .cover-bottom { margin-top: 62px; font-size: 20px; color: var(--deck-secondary); }
+.deck .cover-bottom p { margin: 0 0 9px; }
+.deck.section-divider .deck-content { display: flex; flex-direction: column; justify-content: center; }
+.deck.section-divider .eyebrow { color: var(--deck-accent); margin-bottom: 36px; }
+.deck.section-divider h1 { font-size: 74px; max-width: 1000px; }
+.deck.section-divider .lead { max-width: 790px; margin: 0; }
+.deck .split-columns { display: grid; grid-template-columns: 1fr 1fr; gap: var(--deck-gap); }
+.deck .split-columns > div { min-width: 0; }
+.deck .split-columns.wide-left { grid-template-columns: 1.7fr 1fr; }
+.deck .split-columns.wide-right { grid-template-columns: 1fr 1.7fr; }
+.deck .figure-block { margin: 0; }
+.deck .figure-content { width: 100%; }
+.deck .figure-content > img { display: block; width: 100%; height: 320px; object-fit: contain; }
+.deck.quotation .eyebrow { margin-bottom: 40px; }
+.deck.quotation .deck-content { display: flex; flex-direction: column; justify-content: center; }
+.deck.quotation blockquote { color: var(--deck-text); background: transparent; border: 0; padding: 0; margin: 0; font-size: 49px; font-weight: 400; line-height: 1.28; max-width: 1050px; }
+.deck.quotation blockquote.quote-courier { font-family: var(--deck-display-font); font-size: 44px; line-height: 1.35; }
+.deck.quotation blockquote p { margin: 0; font: inherit; color: inherit; line-height: inherit; }
+.deck .quote-attribution { margin-top: 36px; font-size: 22px; color: var(--deck-secondary); }
+
+/* Content patterns. Use the same classes in new slides. */
+.deck .agenda { display: grid; grid-template-columns: 1fr 1fr; column-gap: 90px; row-gap: 40px; margin-top: 45px; }
+.deck .agenda-item { display: grid; grid-template-columns: 46px 1fr; gap: 20px; }
+.deck .agenda-number { font-size: 20px; color: var(--deck-accent); padding-top: 3px; }
+.deck .agenda h2 { margin-bottom: 10px; }
+.deck .agenda p { font-size: 22px; color: var(--deck-secondary); }
+.deck .comparison-heading { padding-bottom: 17px; border-bottom: 1px solid var(--deck-border); }
+.deck .slidev-code { padding: 22px 24px !important; background: var(--deck-surface) !important; border-radius: 3px; font-family: var(--deck-mono) !important; }
+.deck pre { box-shadow: none !important; }
+.deck pre code { font-family: var(--deck-mono) !important; }
+.deck .code-notes { font-size: 23px; }
+.deck .code-notes h3 { margin-top: 4px; }
+.deck .code-notes p { color: var(--deck-secondary); margin-bottom: 25px; }
+.deck table { width: 100%; font-size: 23px; border-collapse: collapse; margin-top: 8px; }
+.deck th { text-align: left; color: var(--deck-secondary); font-size: 18px; font-weight: 400; }
+.deck th, .deck td { padding: 17px 18px; border-bottom: 1px solid var(--deck-border); }
+.deck th:first-child, .deck td:first-child { padding-left: 0; }
+.deck tr:last-child td { border-bottom: 0; }
+.deck .key-number { font-size: 78px; line-height: 1.05; color: var(--deck-accent); letter-spacing: -.025em; margin: 8px 0 20px; }
+.deck .chart-notes { padding-top: 24px; }
+.deck .chart-notes p { color: var(--deck-secondary); font-size: 23px; }
+.deck .closing-points { display: flex; gap: 48px; font-size: 23px; margin-top: 35px; }
+.deck .closing-points span { color: var(--deck-secondary); }
+
+/* Theme-aware vector figures. */
+.deck svg { font-family: var(--deck-font); }
+.figure-placeholder, .process-diagram, .milestone-timeline, .bar-chart { display: block; width: 100%; height: auto; }
+.deck .chart-tick { font-size: 17px; fill: var(--deck-muted); }
+.deck .chart-label { font-size: 21px; fill: var(--deck-text); }
+.deck .diagram-number { font-size: 20px; fill: var(--deck-accent); }
+.deck .diagram-title { font-size: 30px; font-weight: 700; fill: var(--deck-text); }
+.deck .diagram-detail { font-size: 21px; fill: var(--deck-secondary); }
+.deck .timeline-title { font-size: 25px; font-weight: 700; fill: var(--deck-text); }
+
+.deck .diagram-title, .deck .timeline-title { font-family: var(--deck-heading-font); }
+
+/* Opt-in Courier Prime for labels and specimen notes. Section titles use Inter. */
+.deck .display-type { font-family: var(--deck-display-font); }
+.deck .type-label { font-family: var(--deck-display-font); border: 1px solid var(--deck-border); padding: 25px 30px; background: var(--deck-surface); }
+.deck .type-label .label-kicker { font-size: 18px; letter-spacing: .08em; margin-bottom: 15px; }
+.deck .type-label .label-title { font-family: var(--deck-display-font); font-size: 38px; font-weight: 400; letter-spacing: .015em; margin: 0 0 18px; line-height: 1.2; }
+.deck .type-label .label-lines { font-size: 23px; line-height: 1.5; margin: 0; }
+.deck .type-label .label-meta { border-top: 1px solid var(--deck-border); padding-top: 13px; margin-top: 19px; font-size: 18px; }
+.deck pre code { font-variant-ligatures: none; }

@@ -2,8 +2,6 @@
 layout: figure
 ---
 
-<div class="eyebrow">06 · Figure and caption</div>
-
 # Duis aute irure dolor.
 
 <p class="lead">In reprehenderit in voluptate velit esse cillum dolore.</p>
@@ -17,6 +15,7 @@ layout: figure
 Lorem ipsum · Consectetur adipiscing elit, sed do eiusmod tempor incididunt.
 
 <!--
+Gallery 06 · Figure and caption.
 Figure: replace FigurePlaceholder with an image, SVG, or another Vue component.
 Example: <img src="../assets/figures/example.svg" alt="Describe what the figure shows" />.
 Use src/assets/figures for local images; paths here are relative to this Markdown file.
@@ -28,8 +27,6 @@ Keep the source / citation in the caption slot.
 layout: split
 ratio: wide-left
 ---
-
-<div class="eyebrow">07 · Code and explanation</div>
 
 # Ut enim ad minim veniam.
 
@@ -66,6 +63,7 @@ print(amet)
 </div>
 
 <!--
+Gallery 07 · Code and explanation.
 Code: use a real language identifier for syntax highlighting. Prefer fewer than 12 lines.
 A small-label names the code; compact-code shrinks it to sit under the label. Inline <code> in notes turns accent.
 The example is valid Python; replace it with a small, complete example for your topic.
@@ -74,8 +72,6 @@ The example is valid Python; replace it with a small, complete example for your 
 ---
 layout: default
 ---
-
-<div class="eyebrow">08 · Table</div>
 
 # Ex ea commodo consequat.
 
@@ -91,6 +87,7 @@ layout: default
 <p class="caption">Lorem ipsum · Dolor sit amet, consectetur adipiscing elit.</p>
 
 <!--
+Gallery 08 · Table.
 Table: four rows and four columns keep it readable. Right-align quantities.
 All numbers in this gallery are placeholders, not measurements.
 -->
@@ -99,8 +96,6 @@ All numbers in this gallery are placeholders, not measurements.
 layout: split
 ratio: wide-left
 ---
-
-<div class="eyebrow">09 · Chart and takeaway</div>
 
 # Sed ut perspiciatis unde.
 
@@ -122,6 +117,7 @@ ratio: wide-left
 </div>
 
 <!--
+Gallery 09 · Chart and takeaway.
 Chart: pass labels and non-negative values to BarChart. The scale includes the largest value.
 This component suits a few short categories; use a plotting tool for scientific figures.
 A prominent number must agree with the chart. The 86 here is illustrative.
@@ -130,8 +126,6 @@ A prominent number must agree with the chart. The 86 here is illustrative.
 ---
 layout: figure
 ---
-
-<div class="eyebrow">10 · Process diagram</div>
 
 # Nemo enim ipsam voluptatem.
 
@@ -146,6 +140,7 @@ layout: figure
 Lorem ipsum → Dolor sit amet → Consectetur adipiscing elit.
 
 <!--
+Gallery 10 · Process diagram.
 Process: pass three or four short steps. The component spaces them and draws arrows.
 For branching graphs, substitute a Mermaid diagram or a custom SVG in the figure slot.
 In a custom SVG, draw arrowheads as filled triangles (closed path, fill, no stroke), with
@@ -156,8 +151,6 @@ lets the line show through the tip.
 ---
 layout: figure
 ---
-
-<div class="eyebrow">11 · Timeline / roadmap</div>
 
 # Ut labore et dolore magna.
 
@@ -172,6 +165,7 @@ layout: figure
 Lorem ipsum · Sed do eiusmod tempor incididunt.
 
 <!--
+Gallery 11 · Timeline / roadmap.
 Timeline: three or four milestones with short labels. Dates are display labels, not a time scale.
 Use a different chart if actual elapsed durations need to be represented.
 -->

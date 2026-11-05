@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<div class="eyebrow">04 · Text and bullets</div>
-
 # Lorem ipsum dolor sit amet.
 
 <p class="lead">Consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
@@ -19,6 +17,7 @@ layout: default
 <p class="bottom-note accent">Duis aute irure dolor in reprehenderit.</p>
 
 <!--
+Gallery 04 · Text and bullets.
 Text: keep to three or four points. Bold the phrase the audience should remember.
 For progressive delivery, wrap the Markdown list in <v-clicks> ... </v-clicks>.
 -->
@@ -27,8 +26,6 @@ For progressive delivery, wrap the Markdown list in <v-clicks> ... </v-clicks>.
 layout: split
 ratio: equal
 ---
-
-<div class="eyebrow">05 · Two-column comparison</div>
 
 # Lorem ipsum, dolor sit amet.
 
@@ -58,6 +55,7 @@ ratio: equal
 </div>
 
 <!--
+Gallery 05 · Two-column comparison.
 Comparison: the default slot is the shared heading; left and right are independent columns.
 Use ratio: wide-left or wide-right when one side needs more room.
 Takeaway: one or two short lines under a rule, for the point the audience should keep.

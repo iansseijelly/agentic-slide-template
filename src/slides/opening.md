@@ -2,8 +2,6 @@
 layout: cover
 ---
 
-<div class="eyebrow">01 · Cover</div>
-
 # Lorem ipsum<br>dolor sit amet.
 
 <p class="lead">Consectetur adipiscing elit.<br>Sed do eiusmod tempor incididunt.</p>
@@ -15,6 +13,7 @@ Lorem Ipsum · Dolor Sit Amet
 Consectetur · 20XX
 
 <!--
+Gallery 01 · Cover.
 Cover: one short title, a two-line subtitle, and presenter / date in the bottom slot.
 Replace the numbered pattern labels with your topic or remove them.
 -->
@@ -22,8 +21,6 @@ Replace the numbered pattern labels with your topic or remove them.
 ---
 layout: default
 ---
-
-<div class="eyebrow">02 · Agenda</div>
 
 # Consectetur adipiscing elit.
 
@@ -37,6 +34,7 @@ layout: default
 </div>
 
 <!--
+Gallery 02 · Agenda.
 Agenda: four short items in a two-by-two grid. Change the content rather than adding boxes.
 -->
 
@@ -44,12 +42,11 @@ Agenda: four short items in a two-by-two grid. Change the content rather than ad
 layout: section
 ---
 
-<div class="eyebrow">03 · Section divider</div>
-
 # Sed do eiusmod<br>tempor incididunt.
 
 <p class="lead">Ut labore et dolore magna aliqua.</p>
 
 <!--
+Gallery 03 · Section divider.
 Section divider: use this as a pause between parts. One short heading and one supporting line.
 -->

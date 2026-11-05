@@ -6,13 +6,14 @@ layout: quote
 
 ::label::
 
-12 · Quotation / key statement
+Lorem ipsum
 
 ::attribution::
 
 Lorem Ipsum · Dolor Sit Amet
 
 <!--
+Gallery 12 · Quotation / key statement.
 Quote: use a short quotation or a single central statement. Replace the attribution with
 an accurate source; the text and attribution here are placeholders.
 For a short typewriter-style excerpt, add quoteFont: courier to this slide's frontmatter.
@@ -22,8 +23,6 @@ Omit it to keep the default Inter quotation style.
 ---
 layout: default
 ---
-
-<div class="eyebrow">13 · Label and notes</div>
 
 # Lorem ipsum dolor sit amet.
 
@@ -45,6 +44,7 @@ layout: default
 </div>
 
 <!--
+Gallery 13 · Label and notes.
 Label: use Courier Prime for compact specimen notes or metadata with .type-label.
 Keep the surrounding prose and all section titles in Inter. Code uses Source Code Pro.
 -->

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useNav } from '@slidev/client'
-import config from '../deck.config'
 const { currentPage, total } = useNav()
 defineProps<{ variant?: string }>()
 </script>
@@ -9,7 +8,6 @@ defineProps<{ variant?: string }>()
   <div class="slidev-layout deck" :class="variant" :data-slide-count="total" :data-slide-number="currentPage">
     <main class="deck-content"><slot /></main>
     <footer class="slide-footer">
-      <span>{{ config.footer }}</span>
       <span>{{ String(currentPage).padStart(2, '0') }} / {{ String(total).padStart(2, '0') }}</span>
     </footer>
   </div>

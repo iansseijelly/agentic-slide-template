@@ -37,6 +37,9 @@ ratio: wide-left
 
 ::left::
 
+<div class="small-label">lorem.py · dolor sit amet</div>
+<div class="compact-code">
+
 ```python
 def lorem(ipsum):
     dolor = [sit for sit in ipsum
@@ -47,13 +50,15 @@ amet = lorem([3, 1, -2, 4])
 print(amet)
 ```
 
+</div>
+
 <p class="caption">Lorem ipsum · Dolor sit amet.</p>
 
 ::right::
 
 <div class="code-notes">
 <h3>Lorem</h3>
-<p>Ipsum dolor sit amet,<br>consectetur adipiscing elit.</p>
+<p><code>ipsum</code> dolor sit amet,<br>consectetur adipiscing elit.</p>
 <h3>Dolor</h3>
 <p>Sed do eiusmod tempor<br>incididunt ut labore.</p>
 <h3>Amet</h3>
@@ -62,6 +67,7 @@ print(amet)
 
 <!--
 Code: use a real language identifier for syntax highlighting. Prefer fewer than 12 lines.
+A small-label names the code; compact-code shrinks it to sit under the label. Inline <code> in notes turns accent.
 The example is valid Python; replace it with a small, complete example for your topic.
 -->
 
@@ -142,6 +148,9 @@ Lorem ipsum → Dolor sit amet → Consectetur adipiscing elit.
 <!--
 Process: pass three or four short steps. The component spaces them and draws arrows.
 For branching graphs, substitute a Mermaid diagram or a custom SVG in the figure slot.
+In a custom SVG, draw arrowheads as filled triangles (closed path, fill, no stroke), with
+markerUnits="userSpaceOnUse" for a fixed size. An open chevron over a dashed or thick line
+lets the line show through the tip.
 -->
 
 ---

@@ -52,7 +52,7 @@ html, body, #app, #slide-content { background: var(--deck-bg); }
 .deck .small-label { font-size: 17px; color: var(--deck-muted); margin-bottom: 18px; }
 .deck .caption, .deck figcaption { font-size: 16px; color: var(--deck-muted); line-height: 1.4; margin-top: 16px; }
 .deck .caption p, .deck figcaption p { margin: 0; }
-.deck .slide-footer { position: absolute; bottom: 25px; left: var(--deck-gutter); right: var(--deck-gutter); display: flex; justify-content: space-between; font-size: 13px; letter-spacing: .025em; color: var(--deck-muted); }
+.deck .slide-footer { position: absolute; bottom: 25px; left: var(--deck-gutter); right: var(--deck-gutter); display: flex; justify-content: flex-end; font-size: 13px; letter-spacing: .025em; color: var(--deck-muted); }
 .deck ul, .deck ol { margin: 0; padding-left: 1.15em; }
 .deck li { margin: 0 0 18px; padding-left: .2em; line-height: 1.5; }
 .deck li::marker { color: var(--deck-accent); }
@@ -129,3 +129,12 @@ html, body, #app, #slide-content { background: var(--deck-bg); }
 .deck .type-label .label-lines { font-size: 23px; line-height: 1.5; margin: 0; }
 .deck .type-label .label-meta { border-top: 1px solid var(--deck-border); padding-top: 13px; margin-top: 19px; font-size: 18px; }
 .deck pre code { font-variant-ligatures: none; }
+
+/* Labeled code, inline code in prose, and a closing takeaway. */
+.deck .compact-code { --slidev-code-font-size: 18px; --slidev-code-line-height: 1.4; }
+.deck .compact-code .slidev-code { margin: 0 !important; }
+.deck .code-notes code, .deck .takeaway code, .deck .caption code { font-family: var(--deck-mono); background: transparent; padding: 0; border: 0; box-shadow: none; color: var(--deck-accent); }
+.deck .takeaway { border-top: 1px solid var(--deck-border); padding-top: 16px; margin-top: 24px; font-size: 24px; line-height: 1.4; }
+.deck .takeaway p { margin: 0 0 6px; }
+.deck .takeaway p:last-child { margin: 0; }
+.deck .bottom-note > .takeaway { margin-top: 0; color: var(--deck-text); }

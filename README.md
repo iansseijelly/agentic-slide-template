@@ -11,8 +11,8 @@ npm run dev
 
 Open the local URL printed by Slidev. Edit the Markdown files in `src/slides/`
 for content. `src/slides.md` sets deck options and assembles those files in order
-using `src:` entries. Edit `src/deck.config.ts` for the footer and `src/style.css`
-for styling. Put images in `src/assets/figures/` and reference them from the slide files
+using `src:` entries. Edit `src/style.css` for styling, and `src/deck.config.ts`
+for settings shared across the deck. Put images in `src/assets/figures/` and reference them from the slide files
 with `<img src="../assets/figures/example.svg" alt="Description" />`.
 
 ## Generate

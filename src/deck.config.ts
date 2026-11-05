@@ -1,4 +1,2 @@
-// Shared presentation metadata. Layouts read this automatically.
-export default {
-  footer: 'Lorem ipsum · Dolor sit amet',
-}
+// Shared presentation settings, for toggles that layouts or components read.
+export default {}

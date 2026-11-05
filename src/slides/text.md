@@ -52,9 +52,13 @@ ratio: equal
 
 ::bottom::
 
-<span class="accent">Lorem ipsum.</span> Ex ea commodo consequat.
+<div class="takeaway">
+<p><span class="accent">Lorem ipsum.</span> Ex ea commodo consequat.</p>
+<p>Duis aute irure <code>dolor</code> in reprehenderit.</p>
+</div>
 
 <!--
 Comparison: the default slot is the shared heading; left and right are independent columns.
 Use ratio: wide-left or wide-right when one side needs more room.
+Takeaway: one or two short lines under a rule, for the point the audience should keep.
 -->
